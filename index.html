@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Examen Simulado - Marketing y Proyecto</title>
+<style>
+  body { font-family: Poppins, sans-serif; background: #f3f7fb; color: #333; padding: 20px; }
+  h1 { text-align: center; color: #0066cc; }
+  h2 { color: #444; }
+  .pregunta { background: #fff; padding: 15px; border-radius: 10px; margin: 15px 0; box-shadow: 0 2px 5px rgba(0,0,0,0.1); }
+  button { background: #0066cc; color: #fff; padding: 10px 20px; border: none; border-radius: 10px; cursor: pointer; }
+  button:hover { background: #004c99; }
+  #resultado { font-weight: bold; font-size: 18px; text-align: center; margin-top: 20px; }
+</style>
+</head>
+<body>
+
+<h1>🧩 Examen Simulado - Marketing y Proyecto</h1>
+<form id="quizForm">
+
+  <div class="pregunta">
+    <h2>1. ¿Cuál de las siguientes P se refiere a la distribución del producto?</h2>
+    <label><input type="radio" name="p1" value="a"> Promoción</label><br>
+    <label><input type="radio" name="p1" value="b"> Producto</label><br>
+    <label><input type="radio" name="p1" value="c"> Plaza</label><br>
+    <label><input type="radio" name="p1" value="d"> Precio</label>
+  </div>
+
+  <div class="pregunta">
+    <h2>2. ¿Qué mide un indicador de proceso (KPI)?</h2>
+    <label><input type="radio" name="p2" value="a"> Solo el costo de producción</label><br>
+    <label><input type="radio" name="p2" value="b"> El desempeño o eficiencia del proceso</label><br>
+    <label><input type="radio" name="p2" value="c"> El número de trabajadores</label><br>
+    <label><input type="radio" name="p2" value="d"> El tamaño de la empresa</label>
+  </div>
+
+  <div class="pregunta">
+    <h2>3. ¿Qué tipo de empresa tiene responsabilidad limitada con un solo dueño?</h2>
+    <label><input type="radio" name="p3" value="a"> Persona Natural con negocio</label><br>
+    <label><input type="radio" name="p3" value="b"> E.I.R.L.</label><br>
+    <label><input type="radio" name="p3" value="c"> S.A.A.</label><br>
+    <label><input type="radio" name="p3" value="d"> RUS</label>
+  </div>
+
+  <div class="pregunta">
+    <h2>4. ¿Qué P se relaciona con la apariencia del local o el empaque del producto?</h2>
+    <label><input type="radio" name="p4" value="a"> Personas</label><br>
+    <label><input type="radio" name="p4" value="b"> Evidencia física</label><br>
+    <label><input type="radio" name="p4" value="c"> Procesos</label><br>
+    <label><input type="radio" name="p4" value="d"> Promoción</label>
+  </div>
+
+  <div class="pregunta">
+    <h2>5. ¿Qué representa un flujograma de producción?</h2>
+    <label><input type="radio" name="p5" value="a"> Los pasos del proceso de producción</label><br>
+    <label><input type="radio" name="p5" value="b"> Los ingresos y gastos</label><br>
+    <label><input type="radio" name="p5" value="c"> La estructura legal del negocio</label><br>
+    <label><input type="radio" name="p5" value="d"> Las redes sociales de la empresa</label>
+  </div>
+
+  <div class="pregunta">
+    <h2>6. ¿Qué régimen tributario es ideal para microempresas?</h2>
+    <label><input type="radio" name="p6" value="a"> Régimen General</label><br>
+    <label><input type="radio" name="p6" value="b"> RUS</label><br>
+    <label><input type="radio" name="p6" value="c"> RMT</label><br>
+    <label><input type="radio" name="p6" value="d"> SAC</label>
+  </div>
+
+  <div class="pregunta">
+    <h2>7. ¿Qué P está directamente relacionada con la atención al cliente?</h2>
+    <label><input type="radio" name="p7" value="a"> Personas</label><br>
+    <label><input type="radio" name="p7" value="b"> Precio</label><br>
+    <label><input type="radio" name="p7" value="c"> Promoción</label><br>
+    <label><input type="radio" name="p7" value="d"> Plaza</label>
+  </div>
+
+  <div style="text-align:center;">
+    <button type="button" onclick="corregir()">Ver resultado</button>
+  </div>
+
+  <div id="resultado"></div>
+
+</form>
+
+<script>
+function corregir() {
+  const respuestas = {p1:"c", p2:"b", p3:"b", p4:"b", p5:"a", p6:"b", p7:"a"};
+  let puntos = 0;
+  for (let key in respuestas) {
+    const marcada = document.querySelector(`input[name="${key}"]:checked`);
+    if (marcada && marcada.value === respuestas[key]) puntos++;
+  }
+  document.getElementById("resultado").innerHTML = 
+    `Tu puntaje: ${puntos}/7 (${Math.round((puntos/7)*100)}%)`;
+}
+</script>
+
+</body>
+</html>
