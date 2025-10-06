@@ -3,97 +3,113 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Examen Simulado - Marketing y Proyecto</title>
+<title>Examen Dinámico - Marketing y Proyecto</title>
 <style>
-  body { font-family: Poppins, sans-serif; background: #f3f7fb; color: #333; padding: 20px; }
-  h1 { text-align: center; color: #0066cc; }
-  h2 { color: #444; }
-  .pregunta { background: #fff; padding: 15px; border-radius: 10px; margin: 15px 0; box-shadow: 0 2px 5px rgba(0,0,0,0.1); }
-  button { background: #0066cc; color: #fff; padding: 10px 20px; border: none; border-radius: 10px; cursor: pointer; }
-  button:hover { background: #004c99; }
-  #resultado { font-weight: bold; font-size: 18px; text-align: center; margin-top: 20px; }
+  body {
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(135deg, #f2f6ff, #e3ecff);
+    color: #222;
+    padding: 20px;
+  }
+  h1 { text-align: center; color: #0059c9; }
+  .pregunta {
+    background: #fff;
+    padding: 15px;
+    border-radius: 12px;
+    margin: 15px 0;
+    box-shadow: 0 3px 6px rgba(0,0,0,0.1);
+  }
+  button {
+    background: #0059c9;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    padding: 12px 25px;
+    font-size: 16px;
+    cursor: pointer;
+  }
+  button:hover { background: #003f94; }
+  #resultado {
+    font-weight: bold;
+    font-size: 20px;
+    text-align: center;
+    margin-top: 25px;
+    color: #222;
+  }
 </style>
 </head>
 <body>
 
-<h1>🧩 Examen Simulado - Marketing y Proyecto</h1>
-<form id="quizForm">
+<h1>🧩 Examen Simulado Dinámico</h1>
+<p style="text-align:center;">Cada vez que recargues la página, el examen cambiará 🔄</p>
 
-  <div class="pregunta">
-    <h2>1. ¿Cuál de las siguientes P se refiere a la distribución del producto?</h2>
-    <label><input type="radio" name="p1" value="a"> Promoción</label><br>
-    <label><input type="radio" name="p1" value="b"> Producto</label><br>
-    <label><input type="radio" name="p1" value="c"> Plaza</label><br>
-    <label><input type="radio" name="p1" value="d"> Precio</label>
-  </div>
+<form id="quizForm"></form>
 
-  <div class="pregunta">
-    <h2>2. ¿Qué mide un indicador de proceso (KPI)?</h2>
-    <label><input type="radio" name="p2" value="a"> Solo el costo de producción</label><br>
-    <label><input type="radio" name="p2" value="b"> El desempeño o eficiencia del proceso</label><br>
-    <label><input type="radio" name="p2" value="c"> El número de trabajadores</label><br>
-    <label><input type="radio" name="p2" value="d"> El tamaño de la empresa</label>
-  </div>
-
-  <div class="pregunta">
-    <h2>3. ¿Qué tipo de empresa tiene responsabilidad limitada con un solo dueño?</h2>
-    <label><input type="radio" name="p3" value="a"> Persona Natural con negocio</label><br>
-    <label><input type="radio" name="p3" value="b"> E.I.R.L.</label><br>
-    <label><input type="radio" name="p3" value="c"> S.A.A.</label><br>
-    <label><input type="radio" name="p3" value="d"> RUS</label>
-  </div>
-
-  <div class="pregunta">
-    <h2>4. ¿Qué P se relaciona con la apariencia del local o el empaque del producto?</h2>
-    <label><input type="radio" name="p4" value="a"> Personas</label><br>
-    <label><input type="radio" name="p4" value="b"> Evidencia física</label><br>
-    <label><input type="radio" name="p4" value="c"> Procesos</label><br>
-    <label><input type="radio" name="p4" value="d"> Promoción</label>
-  </div>
-
-  <div class="pregunta">
-    <h2>5. ¿Qué representa un flujograma de producción?</h2>
-    <label><input type="radio" name="p5" value="a"> Los pasos del proceso de producción</label><br>
-    <label><input type="radio" name="p5" value="b"> Los ingresos y gastos</label><br>
-    <label><input type="radio" name="p5" value="c"> La estructura legal del negocio</label><br>
-    <label><input type="radio" name="p5" value="d"> Las redes sociales de la empresa</label>
-  </div>
-
-  <div class="pregunta">
-    <h2>6. ¿Qué régimen tributario es ideal para microempresas?</h2>
-    <label><input type="radio" name="p6" value="a"> Régimen General</label><br>
-    <label><input type="radio" name="p6" value="b"> RUS</label><br>
-    <label><input type="radio" name="p6" value="c"> RMT</label><br>
-    <label><input type="radio" name="p6" value="d"> SAC</label>
-  </div>
-
-  <div class="pregunta">
-    <h2>7. ¿Qué P está directamente relacionada con la atención al cliente?</h2>
-    <label><input type="radio" name="p7" value="a"> Personas</label><br>
-    <label><input type="radio" name="p7" value="b"> Precio</label><br>
-    <label><input type="radio" name="p7" value="c"> Promoción</label><br>
-    <label><input type="radio" name="p7" value="d"> Plaza</label>
-  </div>
-
-  <div style="text-align:center;">
-    <button type="button" onclick="corregir()">Ver resultado</button>
-  </div>
-
-  <div id="resultado"></div>
-
-</form>
+<div style="text-align:center;">
+  <button type="button" onclick="corregir()">Finalizar examen</button>
+</div>
+<div id="resultado"></div>
 
 <script>
-function corregir() {
-  const respuestas = {p1:"c", p2:"b", p3:"b", p4:"b", p5:"a", p6:"b", p7:"a"};
-  let puntos = 0;
-  for (let key in respuestas) {
-    const marcada = document.querySelector(`input[name="${key}"]:checked`);
-    if (marcada && marcada.value === respuestas[key]) puntos++;
-  }
-  document.getElementById("resultado").innerHTML = 
-    `Tu puntaje: ${puntos}/7 (${Math.round((puntos/7)*100)}%)`;
+const preguntas = [
+  {pregunta: "¿Cuál de las siguientes P representa la distribución del producto?", opciones: ["Promoción", "Producto", "Plaza", "Precio"], correcta: "Plaza"},
+  {pregunta: "¿Qué mide un indicador de proceso (KPI)?", opciones: ["El costo total", "El desempeño del proceso", "El número de empleados", "El color del logo"], correcta: "El desempeño del proceso"},
+  {pregunta: "¿Qué P se relaciona con la apariencia del local o empaque?", opciones: ["Personas", "Evidencia física", "Procesos", "Promoción"], correcta: "Evidencia física"},
+  {pregunta: "¿Qué tipo de empresa tiene un solo dueño y responsabilidad limitada?", opciones: ["S.R.L.", "S.A.C.", "E.I.R.L.", "Persona Natural"], correcta: "E.I.R.L."},
+  {pregunta: "¿Qué representa un flujograma de producción?", opciones: ["Los pasos del proceso productivo", "Los ingresos mensuales", "La jerarquía de empleados", "Los impuestos"], correcta: "Los pasos del proceso productivo"},
+  {pregunta: "¿Qué P está directamente relacionada con la atención al cliente?", opciones: ["Personas", "Precio", "Plaza", "Promoción"], correcta: "Personas"},
+  {pregunta: "¿Cuál es la P que se refiere al valor monetario del producto?", opciones: ["Plaza", "Precio", "Producto", "Promoción"], correcta: "Precio"},
+  {pregunta: "¿Qué régimen tributario es ideal para microempresas?", opciones: ["RMT", "RUS", "RER", "General"], correcta: "RUS"},
+  {pregunta: "¿Qué documento muestra la jerarquía de un negocio?", opciones: ["Organigrama", "Factura", "Presupuesto", "Contrato"], correcta: "Organigrama"},
+  {pregunta: "¿Qué significa MYPE?", opciones: ["Micro y Pequeña Empresa", "Medio y Personal Empresarial", "Misión y Personal Económico", "Microempresa del Perú"], correcta: "Micro y Pequeña Empresa"},
+  {pregunta: "¿Cuál de las siguientes pertenece a la ingeniería del proyecto?", opciones: ["Publicidad", "Flujograma de producción", "Atención al cliente", "Diseño del logo"], correcta: "Flujograma de producción"},
+  {pregunta: "¿Qué son las 7 P's del marketing?", opciones: ["Una guía para diseñar productos", "Variables del marketing mix", "Un modelo financiero", "Un tipo de impuesto"], correcta: "Variables del marketing mix"},
+  {pregunta: "¿Qué P se enfoca en los procesos de atención y entrega?", opciones: ["Personas", "Procesos", "Precio", "Promoción"], correcta: "Procesos"},
+  {pregunta: "¿Qué es un indicador de satisfacción del cliente?", opciones: ["KPI", "SAC", "RUS", "SAA"], correcta: "KPI"},
+  {pregunta: "¿Cuál es el principal objetivo del plan de marketing?", opciones: ["Aumentar ventas y posicionar el producto", "Pagar impuestos", "Contratar personal", "Registrar marca"], correcta: "Aumentar ventas y posicionar el producto"},
+  {pregunta: "¿Cuál es una ventaja de formalizar una empresa?", opciones: ["Acceder a créditos y apoyo estatal", "Evitar la competencia", "No pagar impuestos", "Eliminar publicidad"], correcta: "Acceder a créditos y apoyo estatal"},
+  {pregunta: "¿Qué tipo de sociedad permite tener hasta 20 socios?", opciones: ["S.A.C.", "S.A.A.", "S.R.L.", "E.I.R.L."], correcta: "S.A.C."},
+  {pregunta: "¿Qué significa 'Proceso' en las 7 P's?", opciones: ["Secuencia de actividades para entregar el producto", "Diseño del empaque", "Precio de venta", "Lugar de venta"], correcta: "Secuencia de actividades para entregar el producto"},
+  {pregunta: "¿Qué documento define cómo se organiza internamente una empresa?", opciones: ["Organigrama", "Plan de marketing", "Presupuesto", "Contrato de trabajo"], correcta: "Organigrama"},
+  {pregunta: "¿Qué mide un indicador de productividad?", opciones: ["Eficiencia del trabajo", "Decoración del local", "Satisfacción del jefe", "Número de productos en stock"], correcta: "Eficiencia del trabajo"},
+  {pregunta: "¿Qué régimen tributario usan las grandes empresas?", opciones: ["RUS", "RER", "RMT", "Régimen General"], correcta: "Régimen General"},
+  {pregunta: "¿Qué P se relaciona con cómo se comunica y promociona el producto?", opciones: ["Promoción", "Plaza", "Procesos", "Producto"], correcta: "Promoción"},
+  {pregunta: "¿Qué tipo de persona jurídica puede cotizar en la bolsa?", opciones: ["S.A.A.", "S.A.C.", "S.R.L.", "E.I.R.L."], correcta: "S.A.A."}
+];
+
+// --- Generador dinámico ---
+function iniciarExamen() {
+  const form = document.getElementById('quizForm');
+  form.innerHTML = "";
+  const seleccionadas = preguntas.sort(() => 0.5 - Math.random()).slice(0, 10);
+
+  seleccionadas.forEach((p, i) => {
+    const div = document.createElement('div');
+    div.classList.add('pregunta');
+    div.innerHTML = `<h2>${i+1}. ${p.pregunta}</h2>`;
+    const opcionesBarajadas = p.opciones.sort(() => Math.random() - 0.5);
+    opcionesBarajadas.forEach(op => {
+      const id = `p${i}_${op}`;
+      div.innerHTML += `<label><input type="radio" name="p${i}" value="${op}"> ${op}</label><br>`;
+    });
+    form.appendChild(div);
+  });
 }
+
+function corregir() {
+  const seleccionadas = document.querySelectorAll('.pregunta');
+  let puntos = 0;
+  seleccionadas.forEach((div, i) => {
+    const seleccionada = div.querySelector('input[type="radio"]:checked');
+    const texto = div.querySelector('h2').innerText;
+    const obj = preguntas.find(p => texto.includes(p.pregunta));
+    if (seleccionada && seleccionada.value === obj.correcta) puntos++;
+  });
+  document.getElementById("resultado").innerHTML = 
+    `Tu puntaje final: ${puntos}/10 (${Math.round((puntos/10)*100)}%) 🎯`;
+}
+
+window.onload = iniciarExamen;
 </script>
 
 </body>
