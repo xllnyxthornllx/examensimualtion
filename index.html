@@ -3,155 +3,170 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Examen Interactivo - Marketing y Proyecto</title>
+<title>Examen Profesional Final - MYPE, Marketing, KPI e Ingeniería</title>
 <style>
-  @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
-  body {
-    font-family: 'Poppins', sans-serif;
-    margin: 0;
-    padding: 0;
-    background: linear-gradient(120deg, #6a11cb, #2575fc);
-    background-size: 200% 200%;
-    animation: gradiente 8s ease infinite;
-    color: #222;
-  }
-
-  @keyframes gradiente {
-    0% {background-position: 0% 50%;}
-    50% {background-position: 100% 50%;}
-    100% {background-position: 0% 50%;}
-  }
-
-  .container {
-    max-width: 850px;
-    margin: 40px auto;
-    background: rgba(255,255,255,0.9);
-    border-radius: 20px;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.2);
-    padding: 30px 40px;
-    backdrop-filter: blur(10px);
-    animation: entrada 0.8s ease;
-  }
-
-  @keyframes entrada {
-    from {opacity: 0; transform: translateY(30px);}
-    to {opacity: 1; transform: translateY(0);}
-  }
-
-  h1 {
-    text-align: center;
-    color: #2575fc;
-    font-weight: 700;
-  }
-
-  p {text-align:center; font-size: 14px; color:#444;}
-
-  .pregunta {
-    background: #ffffff;
-    border-left: 5px solid #2575fc;
-    border-radius: 12px;
-    padding: 15px 20px;
-    margin: 20px 0;
-    transition: 0.3s;
-  }
-
-  .pregunta:hover {
-    transform: scale(1.02);
-    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-  }
-
-  h2 {
-    color: #333;
-    font-size: 18px;
-  }
-
-  label {
-    display: block;
-    margin: 6px 0;
-    cursor: pointer;
-  }
-
-  input[type="radio"] {
-    margin-right: 8px;
-  }
-
-  button {
-    display: block;
-    margin: 25px auto;
-    background: linear-gradient(90deg, #2575fc, #6a11cb);
-    color: #fff;
-    border: none;
-    border-radius: 30px;
-    padding: 12px 40px;
-    font-size: 16px;
-    font-weight: 600;
-    cursor: pointer;
-    transition: 0.3s;
-  }
-
-  button:hover {
-    transform: scale(1.05);
-    background: linear-gradient(90deg, #6a11cb, #2575fc);
-  }
-
-  #resultado {
-    text-align: center;
-    font-size: 22px;
-    font-weight: bold;
-    margin-top: 30px;
-    animation: aparecer 1s ease;
-  }
-
-  @keyframes aparecer {
-    from {opacity: 0; transform: scale(0.8);}
-    to {opacity: 1; transform: scale(1);}
-  }
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+body {
+  font-family: 'Poppins', sans-serif;
+  background-color: #0f1115;
+  color: #eaeaea;
+  margin: 0;
+  padding: 0;
+}
+.container {
+  max-width: 900px;
+  margin: 40px auto;
+  background: #1a1d23;
+  border-radius: 10px;
+  padding: 40px;
+  box-shadow: 0 0 25px rgba(0,0,0,0.5);
+  animation: fadeIn 0.8s ease;
+}
+@keyframes fadeIn {
+  from {opacity: 0; transform: translateY(20px);}
+  to {opacity: 1; transform: translateY(0);}
+}
+h1 {
+  text-align: center;
+  color: #3da9fc;
+  margin-bottom: 10px;
+}
+p {
+  text-align: center;
+  color: #aaa;
+  margin-bottom: 25px;
+}
+.pregunta {
+  background: #20242b;
+  border-left: 4px solid #3da9fc;
+  border-radius: 8px;
+  padding: 18px;
+  margin: 20px 0;
+  transition: 0.3s;
+}
+.pregunta:hover {
+  box-shadow: 0 3px 8px rgba(61,169,252,0.15);
+}
+h2 {
+  font-size: 17px;
+  color: #fff;
+  margin-bottom: 10px;
+}
+label {
+  display: block;
+  background: #292d36;
+  color: #eaeaea;
+  padding: 10px 15px;
+  border-radius: 6px;
+  margin: 5px 0;
+  cursor: pointer;
+  transition: 0.2s;
+}
+label:hover {
+  background: #343944;
+}
+input[type="radio"] {
+  accent-color: #3da9fc;
+  margin-right: 8px;
+}
+button {
+  display: block;
+  margin: 35px auto 10px;
+  background: #3da9fc;
+  color: white;
+  font-size: 16px;
+  border: none;
+  border-radius: 30px;
+  padding: 12px 40px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: 0.3s;
+}
+button:hover {
+  background: #268ad3;
+  transform: scale(1.05);
+}
+.progress {
+  width: 100%;
+  background: #252931;
+  border-radius: 10px;
+  margin-top: 20px;
+  height: 10px;
+}
+.bar {
+  height: 10px;
+  background: linear-gradient(90deg, #3da9fc, #0077b6);
+  width: 0%;
+  border-radius: 10px;
+  transition: width 0.6s ease;
+}
+#resultado {
+  text-align: center;
+  font-size: 20px;
+  font-weight: 600;
+  color: #3da9fc;
+  margin-top: 25px;
+  animation: appear 1s ease;
+}
+@keyframes appear {
+  from {opacity: 0; transform: scale(0.9);}
+  to {opacity: 1; transform: scale(1);}
+}
 </style>
 </head>
 <body>
 
 <div class="container">
-  <h1>🧩 Examen Interactivo - Marketing, Ingeniería y Legal</h1>
-  <p>Cada vez que recargues esta página el examen será distinto 🔄</p>
+  <h1>Examen Profesional Final</h1>
+  <p>MYPE • S.M.A.R.T. • 7P’s • Ingeniería del Proyecto • KPI • Costos</p>
+
   <form id="quizForm"></form>
-  <button type="button" onclick="corregir()">Finalizar Examen</button>
+  <div class="progress"><div id="bar" class="bar"></div></div>
+  <button type="button" onclick="corregir()">Finalizar examen</button>
   <div id="resultado"></div>
 </div>
 
 <script>
 const preguntas = [
-  {pregunta:"¿Cuál de las siguientes P representa la distribución del producto?", opciones:["Promoción","Producto","Plaza","Precio"], correcta:"Plaza"},
-  {pregunta:"¿Qué mide un indicador de proceso (KPI)?", opciones:["El costo total","El desempeño del proceso","El número de empleados","El color del logo"], correcta:"El desempeño del proceso"},
-  {pregunta:"¿Qué P se relaciona con la apariencia del local o empaque?", opciones:["Personas","Evidencia física","Procesos","Promoción"], correcta:"Evidencia física"},
-  {pregunta:"¿Qué tipo de empresa tiene un solo dueño y responsabilidad limitada?", opciones:["S.R.L.","S.A.C.","E.I.R.L.","Persona Natural"], correcta:"E.I.R.L."},
-  {pregunta:"¿Qué representa un flujograma de producción?", opciones:["Los pasos del proceso productivo","Los ingresos mensuales","La jerarquía de empleados","Los impuestos"], correcta:"Los pasos del proceso productivo"},
-  {pregunta:"¿Qué P está directamente relacionada con la atención al cliente?", opciones:["Personas","Precio","Plaza","Promoción"], correcta:"Personas"},
-  {pregunta:"¿Cuál es la P que se refiere al valor monetario del producto?", opciones:["Plaza","Precio","Producto","Promoción"], correcta:"Precio"},
-  {pregunta:"¿Qué régimen tributario es ideal para microempresas?", opciones:["RMT","RUS","RER","General"], correcta:"RUS"},
-  {pregunta:"¿Qué documento muestra la jerarquía de un negocio?", opciones:["Organigrama","Factura","Presupuesto","Contrato"], correcta:"Organigrama"},
-  {pregunta:"¿Qué significa MYPE?", opciones:["Micro y Pequeña Empresa","Medio y Personal Empresarial","Misión y Personal Económico","Microempresa del Perú"], correcta:"Micro y Pequeña Empresa"},
-  {pregunta:"¿Cuál de las siguientes pertenece a la ingeniería del proyecto?", opciones:["Publicidad","Flujograma de producción","Atención al cliente","Diseño del logo"], correcta:"Flujograma de producción"},
-  {pregunta:"¿Qué son las 7 P's del marketing?", opciones:["Una guía para diseñar productos","Variables del marketing mix","Un modelo financiero","Un tipo de impuesto"], correcta:"Variables del marketing mix"},
-  {pregunta:"¿Qué P se enfoca en los procesos de atención y entrega?", opciones:["Personas","Procesos","Precio","Promoción"], correcta:"Procesos"},
-  {pregunta:"¿Qué es un indicador de satisfacción del cliente?", opciones:["KPI","SAC","RUS","SAA"], correcta:"KPI"},
-  {pregunta:"¿Cuál es el principal objetivo del plan de marketing?", opciones:["Aumentar ventas y posicionar el producto","Pagar impuestos","Contratar personal","Registrar marca"], correcta:"Aumentar ventas y posicionar el producto"},
-  {pregunta:"¿Cuál es una ventaja de formalizar una empresa?", opciones:["Acceder a créditos y apoyo estatal","Evitar la competencia","No pagar impuestos","Eliminar publicidad"], correcta:"Acceder a créditos y apoyo estatal"},
-  {pregunta:"¿Qué tipo de sociedad permite tener hasta 20 socios?", opciones:["S.A.C.","S.A.A.","S.R.L.","E.I.R.L."], correcta:"S.A.C."},
-  {pregunta:"¿Qué significa 'Proceso' en las 7 P's?", opciones:["Secuencia de actividades para entregar el producto","Diseño del empaque","Precio de venta","Lugar de venta"], correcta:"Secuencia de actividades para entregar el producto"},
-  {pregunta:"¿Qué mide un indicador de productividad?", opciones:["Eficiencia del trabajo","Decoración del local","Satisfacción del jefe","Número de productos en stock"], correcta:"Eficiencia del trabajo"},
-  {pregunta:"¿Qué régimen tributario usan las grandes empresas?", opciones:["RUS","RER","RMT","Régimen General"], correcta:"Régimen General"},
-  {pregunta:"¿Qué P se relaciona con cómo se comunica y promociona el producto?", opciones:["Promoción","Plaza","Procesos","Producto"], correcta:"Promoción"},
-  {pregunta:"¿Qué tipo de persona jurídica puede cotizar en la bolsa?", opciones:["S.A.A.","S.A.C.","S.R.L.","E.I.R.L."], correcta:"S.A.A."},
-  {pregunta:"¿Qué recurso es esencial para la ingeniería del proyecto?", opciones:["Materiales y maquinaria","Publicidad en redes","Diseño gráfico","Personal administrativo"], correcta:"Materiales y maquinaria"},
-  {pregunta:"¿Qué P está más ligada al valor percibido del cliente?", opciones:["Precio","Promoción","Plaza","Producto"], correcta:"Precio"},
-  {pregunta:"¿Qué permite el plan de marketing a un emprendimiento?", opciones:["Definir estrategias y metas","Evitar impuestos","Contratar menos personal","Eliminar la competencia"], correcta:"Definir estrategias y metas"}
+  // --- MYPE ---
+  {pregunta:"¿Qué es una MYPE según la legislación peruana?", opciones:["Unidad económica productiva regulada por la Ley N° 28015","Microempresa sin formalización","Entidad pública regional"], correcta:"Unidad económica productiva regulada por la Ley N° 28015"},
+  {pregunta:"¿Cuál es la principal ventaja de formalizar una MYPE?", opciones:["Acceso a créditos, programas estatales y beneficios tributarios","Evitar el pago de impuestos","Operar sin control del Estado"], correcta:"Acceso a créditos, programas estatales y beneficios tributarios"},
+  {pregunta:"¿Qué régimen tributario se recomienda para una microempresa?", opciones:["RUS","RMT","RER","Régimen General"], correcta:"RUS"},
+  {pregunta:"¿Qué diferencia hay entre persona natural y jurídica?", opciones:["Natural = individuo; Jurídica = entidad legal con representación","Natural = empresa formal; Jurídica = empresa informal","Natural = pública; Jurídica = privada"], correcta:"Natural = individuo; Jurídica = entidad legal con representación"},
+
+  // --- SMART ---
+  {pregunta:"¿Qué significa S.M.A.R.T.?", opciones:["Específico, Medible, Alcanzable, Relevante y con Tiempo definido","Simple, Mínimo, Atractivo, Realista y Temporal","Seguro, Manejable, Aplicable, Real y Temporal"], correcta:"Específico, Medible, Alcanzable, Relevante y con Tiempo definido"},
+  {pregunta:"¿Cuál es un ejemplo correcto de objetivo S.M.A.R.T.?", opciones:["Aumentar las ventas en 15% en tres meses","Vender más","Tener más clientes pronto"], correcta:"Aumentar las ventas en 15% en tres meses"},
+  {pregunta:"¿Por qué es importante que los objetivos sean medibles?", opciones:["Permiten evaluar resultados y tomar decisiones","Porque suenan más técnicos","Para llenar informes largos"], correcta:"Permiten evaluar resultados y tomar decisiones"},
+
+  // --- 7 P’s ---
+  {pregunta:"¿Cuáles son las 7 P’s del Marketing Mix?", opciones:["Producto, Precio, Plaza, Promoción, Personas, Procesos y Evidencia física","Personas, Precio, Política, Planificación, Promoción, Plaza y Producto","Producto, Precio, Política, Plan, Publicidad y Plaza"], correcta:"Producto, Precio, Plaza, Promoción, Personas, Procesos y Evidencia física"},
+  {pregunta:"¿Qué P se relaciona con la atención al cliente?", opciones:["Personas","Procesos","Evidencia física"], correcta:"Personas"},
+  {pregunta:"¿Qué P se enfoca en el modo de entrega del producto o servicio?", opciones:["Procesos","Precio","Promoción"], correcta:"Procesos"},
+  {pregunta:"¿Qué P corresponde al diseño del local, empaque o logo?", opciones:["Evidencia física","Producto","Personas"], correcta:"Evidencia física"},
+  {pregunta:"¿Qué P implica las estrategias de comunicación y publicidad?", opciones:["Promoción","Precio","Plaza"], correcta:"Promoción"},
+
+  // --- INGENIERÍA DEL PROYECTO Y KPI ---
+  {pregunta:"¿Qué es un proceso en ingeniería de proyectos?", opciones:["Conjunto de actividades que transforman entradas en salidas agregando valor","Una reunión de planificación","Una orden de compra"], correcta:"Conjunto de actividades que transforman entradas en salidas agregando valor"},
+  {pregunta:"¿Qué tipos de procesos existen en una empresa?", opciones:["Estratégicos, Operativos y de Soporte","Internos, Externos y de Costos","Simples y Complejos"], correcta:"Estratégicos, Operativos y de Soporte"},
+  {pregunta:"¿Qué es un flujograma de producción?", opciones:["Representación visual del proceso productivo paso a paso","Una lista de precios","Un tipo de organigrama"], correcta:"Representación visual del proceso productivo paso a paso"},
+  {pregunta:"¿Qué mide un KPI (Indicador Clave de Desempeño)?", opciones:["El rendimiento o eficacia de un proceso o actividad","El color del logo","El tamaño del producto"], correcta:"El rendimiento o eficacia de un proceso o actividad"},
+  {pregunta:"¿Cuál de los siguientes es un ejemplo de KPI?", opciones:["Tiempo promedio de atención al cliente","Decoración del local","Tipo de empaque"], correcta:"Tiempo promedio de atención al cliente"},
+  {pregunta:"¿Qué característica debe tener un buen KPI?", opciones:["Ser medible, claro y relevante para el objetivo","Ser decorativo y difícil de entender","Depender de percepciones"], correcta:"Ser medible, claro y relevante para el objetivo"},
+
+  // --- COSTOS ---
+  {pregunta:"¿Qué es un costo fijo?", opciones:["Gasto que no cambia con el nivel de producción","Gasto que varía según las ventas","Costo de materiales"], correcta:"Gasto que no cambia con el nivel de producción"},
+  {pregunta:"¿Qué es un costo variable?", opciones:["Aquel que cambia proporcionalmente a la producción","Costo que se paga una vez al año","Costo financiero"], correcta:"Aquel que cambia proporcionalmente a la producción"},
+  {pregunta:"¿Qué es un costo directo?", opciones:["Asociado directamente a la fabricación del producto","Relacionado con publicidad","Gasto administrativo"], correcta:"Asociado directamente a la fabricación del producto"},
+  {pregunta:"¿Qué es un costo indirecto?", opciones:["Apoya la producción pero no se asocia directamente al producto","Costo de transporte","Costo de venta"], correcta:"Apoya la producción pero no se asocia directamente al producto"},
+  {pregunta:"¿Cuál de estos es un costo fijo típico?", opciones:["Alquiler del local","Harina para producción","Etiqueta del producto"], correcta:"Alquiler del local"}
 ];
 
+// GENERAR EXAMEN ALEATORIO
 function iniciarExamen() {
   const form = document.getElementById('quizForm');
   form.innerHTML = "";
-  const seleccionadas = preguntas.sort(() => 0.5 - Math.random()).slice(0, 10);
-
+  const seleccionadas = preguntas.sort(() => 0.5 - Math.random()).slice(0, 12);
   seleccionadas.forEach((p, i) => {
     const div = document.createElement('div');
     div.classList.add('pregunta');
@@ -164,22 +179,22 @@ function iniciarExamen() {
   });
 }
 
+// CORREGIR EXAMEN
 function corregir() {
   const preguntasDiv = document.querySelectorAll('.pregunta');
   let puntos = 0;
-
   preguntasDiv.forEach((div, i) => {
     const marcada = div.querySelector('input[type="radio"]:checked');
     const texto = div.querySelector('h2').innerText.replace(/^\d+\.\s*/, '');
     const obj = preguntas.find(p => p.pregunta === texto);
     if (marcada && marcada.value === obj.correcta) puntos++;
   });
-
   const total = preguntasDiv.length;
   const porcentaje = Math.round((puntos / total) * 100);
+  document.getElementById('bar').style.width = porcentaje + "%";
   const resultado = document.getElementById("resultado");
-  resultado.innerHTML = `🎯 Puntaje: ${puntos}/${total} (${porcentaje}%)<br>` +
-    (porcentaje >= 70 ? "✅ ¡Excelente trabajo!" : "⚠️ Puedes mejorar, sigue practicando.");
+  resultado.innerHTML = `Resultado: ${puntos}/${total} (${porcentaje}%)<br>` +
+    (porcentaje >= 70 ? "✅ Excelente desempeño, estás listo para el examen real." : "⚠️ Revisa tus apuntes y vuelve a intentarlo.");
 }
 
 window.onload = iniciarExamen;
