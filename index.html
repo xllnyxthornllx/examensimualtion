@@ -3,27 +3,27 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Examen  - MYPE, Marketing, KPI e Ingeniería</title>
+<title>Examen - MYPE, S.M.A.R.T., 7P’s, Ingeniería y KPI</title>
 <style>
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
 body {
   font-family: 'Poppins', sans-serif;
-  background-color: #0f1115;
-  color: #eaeaea;
+  background-color: #0e1015;
+  color: #e8e8e8;
   margin: 0;
   padding: 0;
 }
 .container {
   max-width: 900px;
-  margin: 40px auto;
+  margin: 50px auto;
   background: #1a1d23;
   border-radius: 10px;
   padding: 40px;
-  box-shadow: 0 0 25px rgba(0,0,0,0.5);
+  box-shadow: 0 0 25px rgba(0,0,0,0.6);
   animation: fadeIn 0.8s ease;
 }
 @keyframes fadeIn {
-  from {opacity: 0; transform: translateY(20px);}
+  from {opacity: 0; transform: translateY(25px);}
   to {opacity: 1; transform: translateY(0);}
 }
 h1 {
@@ -34,7 +34,7 @@ h1 {
 p {
   text-align: center;
   color: #aaa;
-  margin-bottom: 25px;
+  margin-bottom: 30px;
 }
 .pregunta {
   background: #20242b;
@@ -45,7 +45,8 @@ p {
   transition: 0.3s;
 }
 .pregunta:hover {
-  box-shadow: 0 3px 8px rgba(61,169,252,0.15);
+  transform: translateY(-3px);
+  box-shadow: 0 3px 10px rgba(61,169,252,0.15);
 }
 h2 {
   font-size: 17px;
@@ -58,9 +59,9 @@ label {
   color: #eaeaea;
   padding: 10px 15px;
   border-radius: 6px;
-  margin: 5px 0;
+  margin: 6px 0;
   cursor: pointer;
-  transition: 0.2s;
+  transition: 0.25s;
 }
 label:hover {
   background: #343944;
@@ -71,7 +72,7 @@ input[type="radio"] {
 }
 button {
   display: block;
-  margin: 35px auto 10px;
+  margin: 35px auto 15px;
   background: #3da9fc;
   color: white;
   font-size: 16px;
@@ -117,8 +118,8 @@ button:hover {
 <body>
 
 <div class="container">
-  <h1>Examen </h1>
-  <p>MYPE • S.M.A.R.T. • 7P’s • Ingeniería del Proyecto • KPI • Costos</p>
+  <h1>Examen</h1>
+  <p>MYPE • Objetivos S.M.A.R.T. • 7 P’s del Marketing • Ingeniería del Proyecto • KPI</p>
 
   <form id="quizForm"></form>
   <div class="progress"><div id="bar" class="bar"></div></div>
@@ -128,41 +129,39 @@ button:hover {
 
 <script>
 const preguntas = [
-  // --- MYPE ---
-  {pregunta:"¿Qué es una MYPE según la legislación peruana?", opciones:["Unidad económica productiva regulada por la Ley N° 28015","Microempresa sin formalización","Entidad pública regional"], correcta:"Unidad económica productiva regulada por la Ley N° 28015"},
-  {pregunta:"¿Cuál es la principal ventaja de formalizar una MYPE?", opciones:["Acceso a créditos, programas estatales y beneficios tributarios","Evitar el pago de impuestos","Operar sin control del Estado"], correcta:"Acceso a créditos, programas estatales y beneficios tributarios"},
-  {pregunta:"¿Qué régimen tributario se recomienda para una microempresa?", opciones:["RUS","RMT","RER","Régimen General"], correcta:"RUS"},
-  {pregunta:"¿Qué diferencia hay entre persona natural y jurídica?", opciones:["Natural = individuo; Jurídica = entidad legal con representación","Natural = empresa formal; Jurídica = empresa informal","Natural = pública; Jurídica = privada"], correcta:"Natural = individuo; Jurídica = entidad legal con representación"},
+  // MYPE
+  {pregunta:"¿Qué significa que una MYPE tenga 'responsabilidad limitada'?", opciones:["El dueño no arriesga su patrimonio personal ante deudas de la empresa","El negocio no paga impuestos","El propietario puede vender libremente la empresa sin trámite"], correcta:"El dueño no arriesga su patrimonio personal ante deudas de la empresa"},
+  {pregunta:"¿Cuál es la principal diferencia entre una microempresa y una pequeña empresa en Perú?", opciones:["El nivel de ventas anuales y número de trabajadores","El tipo de producto que venden","La zona donde opera"], correcta:"El nivel de ventas anuales y número de trabajadores"},
+  {pregunta:"¿Por qué es importante formalizar una MYPE ante SUNAT y el Ministerio de Trabajo?", opciones:["Para acceder a financiamiento, programas estatales y beneficios tributarios","Para evitar registrar a los trabajadores","Solo para cumplir requisitos escolares"], correcta:"Para acceder a financiamiento, programas estatales y beneficios tributarios"},
+  {pregunta:"¿Qué documento legal regula a las MYPE en Perú?", opciones:["Ley N° 28015","Ley N° 29090","Ley N° 30512"], correcta:"Ley N° 28015"},
+  {pregunta:"¿Qué tipo de persona jurídica es ideal para un emprendedor que trabaja solo?", opciones:["E.I.R.L.","S.A.C.","S.A.A."], correcta:"E.I.R.L."},
 
-  // --- SMART ---
-  {pregunta:"¿Qué significa S.M.A.R.T.?", opciones:["Específico, Medible, Alcanzable, Relevante y con Tiempo definido","Simple, Mínimo, Atractivo, Realista y Temporal","Seguro, Manejable, Aplicable, Real y Temporal"], correcta:"Específico, Medible, Alcanzable, Relevante y con Tiempo definido"},
-  {pregunta:"¿Cuál es un ejemplo correcto de objetivo S.M.A.R.T.?", opciones:["Aumentar las ventas en 15% en tres meses","Vender más","Tener más clientes pronto"], correcta:"Aumentar las ventas en 15% en tres meses"},
-  {pregunta:"¿Por qué es importante que los objetivos sean medibles?", opciones:["Permiten evaluar resultados y tomar decisiones","Porque suenan más técnicos","Para llenar informes largos"], correcta:"Permiten evaluar resultados y tomar decisiones"},
+  // SMART
+  {pregunta:"¿Cuál es el propósito de usar objetivos S.M.A.R.T. en un plan de marketing?", opciones:["Asegurar que las metas sean claras, medibles y alcanzables","Usar palabras técnicas","Evitar medir los resultados"], correcta:"Asegurar que las metas sean claras, medibles y alcanzables"},
+  {pregunta:"En un objetivo S.M.A.R.T., ¿qué representa la 'T'?", opciones:["Tiempo definido","Tasa de crecimiento","Tipo de producto"], correcta:"Tiempo definido"},
+  {pregunta:"Selecciona el objetivo S.M.A.R.T. correctamente formulado:", opciones:["Incrementar en 10% la satisfacción de clientes en 6 meses","Ser la mejor empresa algún día","Aumentar ventas pronto"], correcta:"Incrementar en 10% la satisfacción de clientes en 6 meses"},
+  {pregunta:"¿Qué característica hace que un objetivo sea alcanzable?", opciones:["Debe ser posible según los recursos disponibles","Debe sonar ambicioso aunque sea irreal","Debe depender solo de la suerte"], correcta:"Debe ser posible según los recursos disponibles"},
 
-  // --- 7 P’s ---
-  {pregunta:"¿Cuáles son las 7 P’s del Marketing Mix?", opciones:["Producto, Precio, Plaza, Promoción, Personas, Procesos y Evidencia física","Personas, Precio, Política, Planificación, Promoción, Plaza y Producto","Producto, Precio, Política, Plan, Publicidad y Plaza"], correcta:"Producto, Precio, Plaza, Promoción, Personas, Procesos y Evidencia física"},
-  {pregunta:"¿Qué P se relaciona con la atención al cliente?", opciones:["Personas","Procesos","Evidencia física"], correcta:"Personas"},
-  {pregunta:"¿Qué P se enfoca en el modo de entrega del producto o servicio?", opciones:["Procesos","Precio","Promoción"], correcta:"Procesos"},
-  {pregunta:"¿Qué P corresponde al diseño del local, empaque o logo?", opciones:["Evidencia física","Producto","Personas"], correcta:"Evidencia física"},
-  {pregunta:"¿Qué P implica las estrategias de comunicación y publicidad?", opciones:["Promoción","Precio","Plaza"], correcta:"Promoción"},
+  // 7 P’s
+  {pregunta:"¿Qué representa la P de 'Procesos' en las 7 P’s?", opciones:["El modo en que se entrega el servicio o producto al cliente","La forma de fijar el precio","La presentación visual del producto"], correcta:"El modo en que se entrega el servicio o producto al cliente"},
+  {pregunta:"¿Qué P del marketing mix se relaciona directamente con la experiencia sensorial del cliente (diseño del local, empaque, olor, sonido)?", opciones:["Evidencia física","Producto","Plaza"], correcta:"Evidencia física"},
+  {pregunta:"¿Cuál de las siguientes estrategias aplica la P de Promoción?", opciones:["Campaña en redes sociales y descuentos temporales","Definir el precio del producto","Capacitar al personal"], correcta:"Campaña en redes sociales y descuentos temporales"},
+  {pregunta:"¿Por qué se añadieron tres P’s adicionales al modelo original de las 4 P’s?", opciones:["Para adaptarlo a empresas de servicios y experiencias intangibles","Porque el modelo original estaba equivocado","Para cumplir leyes de comercio"], correcta:"Para adaptarlo a empresas de servicios y experiencias intangibles"},
 
-  // --- INGENIERÍA DEL PROYECTO Y KPI ---
-  {pregunta:"¿Qué es un proceso en ingeniería de proyectos?", opciones:["Conjunto de actividades que transforman entradas en salidas agregando valor","Una reunión de planificación","Una orden de compra"], correcta:"Conjunto de actividades que transforman entradas en salidas agregando valor"},
-  {pregunta:"¿Qué tipos de procesos existen en una empresa?", opciones:["Estratégicos, Operativos y de Soporte","Internos, Externos y de Costos","Simples y Complejos"], correcta:"Estratégicos, Operativos y de Soporte"},
-  {pregunta:"¿Qué es un flujograma de producción?", opciones:["Representación visual del proceso productivo paso a paso","Una lista de precios","Un tipo de organigrama"], correcta:"Representación visual del proceso productivo paso a paso"},
-  {pregunta:"¿Qué mide un KPI (Indicador Clave de Desempeño)?", opciones:["El rendimiento o eficacia de un proceso o actividad","El color del logo","El tamaño del producto"], correcta:"El rendimiento o eficacia de un proceso o actividad"},
-  {pregunta:"¿Cuál de los siguientes es un ejemplo de KPI?", opciones:["Tiempo promedio de atención al cliente","Decoración del local","Tipo de empaque"], correcta:"Tiempo promedio de atención al cliente"},
-  {pregunta:"¿Qué característica debe tener un buen KPI?", opciones:["Ser medible, claro y relevante para el objetivo","Ser decorativo y difícil de entender","Depender de percepciones"], correcta:"Ser medible, claro y relevante para el objetivo"},
+  // INGENIERÍA DEL PROYECTO
+  {pregunta:"¿Qué es un proceso dentro de la ingeniería de proyectos?", opciones:["Secuencia de actividades interrelacionadas que transforman entradas en salidas agregando valor","Una tarea administrativa aislada","Una reunión de planificación"], correcta:"Secuencia de actividades interrelacionadas que transforman entradas en salidas agregando valor"},
+  {pregunta:"¿Qué tipo de proceso define la dirección estratégica de la empresa?", opciones:["Proceso estratégico","Proceso operativo","Proceso de soporte"], correcta:"Proceso estratégico"},
+  {pregunta:"¿Qué muestra un flujograma de procesos?", opciones:["El orden lógico y visual de las etapas de un proceso","Las ventas del año","El inventario de productos"], correcta:"El orden lógico y visual de las etapas de un proceso"},
+  {pregunta:"¿Qué mide la 'capacidad efectiva' en un proceso productivo?", opciones:["Producción máxima considerando paradas programadas","Cantidad de productos defectuosos","Eficiencia de trabajadores"], correcta:"Producción máxima considerando paradas programadas"},
 
-  // --- COSTOS ---
-  {pregunta:"¿Qué es un costo fijo?", opciones:["Gasto que no cambia con el nivel de producción","Gasto que varía según las ventas","Costo de materiales"], correcta:"Gasto que no cambia con el nivel de producción"},
-  {pregunta:"¿Qué es un costo variable?", opciones:["Aquel que cambia proporcionalmente a la producción","Costo que se paga una vez al año","Costo financiero"], correcta:"Aquel que cambia proporcionalmente a la producción"},
-  {pregunta:"¿Qué es un costo directo?", opciones:["Asociado directamente a la fabricación del producto","Relacionado con publicidad","Gasto administrativo"], correcta:"Asociado directamente a la fabricación del producto"},
-  {pregunta:"¿Qué es un costo indirecto?", opciones:["Apoya la producción pero no se asocia directamente al producto","Costo de transporte","Costo de venta"], correcta:"Apoya la producción pero no se asocia directamente al producto"},
-  {pregunta:"¿Cuál de estos es un costo fijo típico?", opciones:["Alquiler del local","Harina para producción","Etiqueta del producto"], correcta:"Alquiler del local"}
+  // KPI
+  {pregunta:"¿Qué significa KPI?", opciones:["Key Performance Indicator (Indicador Clave de Desempeño)","Key Process Input (Proceso Inicial)","Knowledge Planning Indicator"], correcta:"Key Performance Indicator (Indicador Clave de Desempeño)"},
+  {pregunta:"¿Qué característica principal debe tener un KPI bien diseñado?", opciones:["Debe ser medible, relevante y estar alineado a los objetivos","Debe cambiar cada semana","Debe ser subjetivo y cualitativo"], correcta:"Debe ser medible, relevante y estar alineado a los objetivos"},
+  {pregunta:"Ejemplo de un KPI bien formulado:", opciones:["Reducir el tiempo promedio de entrega de pedidos a 30 minutos","Ser el mejor restaurante","Aumentar ventas algún día"], correcta:"Reducir el tiempo promedio de entrega de pedidos a 30 minutos"},
+  {pregunta:"¿Qué diferencia hay entre un indicador y un KPI?", opciones:["Todo KPI es un indicador, pero no todo indicador es clave para el éxito","No hay diferencia","Un KPI solo mide costos"], correcta:"Todo KPI es un indicador, pero no todo indicador es clave para el éxito"},
+  {pregunta:"¿Qué tipo de información debe proporcionar un KPI?", opciones:["Datos útiles para tomar decisiones y mejorar el desempeño","Información estética o decorativa","Solo estadísticas pasadas sin análisis"], correcta:"Datos útiles para tomar decisiones y mejorar el desempeño"}
 ];
 
-// GENERAR EXAMEN ALEATORIO
 function iniciarExamen() {
   const form = document.getElementById('quizForm');
   form.innerHTML = "";
@@ -179,7 +178,6 @@ function iniciarExamen() {
   });
 }
 
-// CORREGIR EXAMEN
 function corregir() {
   const preguntasDiv = document.querySelectorAll('.pregunta');
   let puntos = 0;
@@ -194,7 +192,7 @@ function corregir() {
   document.getElementById('bar').style.width = porcentaje + "%";
   const resultado = document.getElementById("resultado");
   resultado.innerHTML = `Resultado: ${puntos}/${total} (${porcentaje}%)<br>` +
-    (porcentaje >= 70 ? "✅ Excelente desempeño, estás listo para el examen real." : "⚠️ Revisa tus apuntes y vuelve a intentarlo.");
+    (porcentaje >= 75 ? "✅ Excelente dominio de los temas." : "⚠️ Revisa tus apuntes, puedes mejorar.");
 }
 
 window.onload = iniciarExamen;
